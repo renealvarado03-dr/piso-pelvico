@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guía Clínica — Rehabilitación de Piso Pélvico | HG Dr. Manuel Gea González</title>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--bg:#FAFAF7;--bg2:#F2F1ED;--bg3:#E8E7E2;
+--text:#1A1A18;--text2:#4A4A45;--text3:#7A7A72;
+--accent:#1B6B4A;--accent-light:#E8F5EE;--accent-dark:#0F4A32;
+--blue:#1A5276;--blue-light:#E3EFF7;--blue-dark:#0E3A56;
+--amber:#8B6914;--amber-light:#FDF3DC;--amber-dark:#6B4F0E;
+--coral:#B5432A;--coral-light:#FBEAE6;--coral-dark:#8A3220;
+--purple:#5B3A8C;--purple-light:#F0EBF7;--purple-dark:#42296A;
+--red:#A52A2A;--red-light:#FCEAEA;
+--border:#D8D7D2;--border2:#C5C4BE;
+--serif:'Source Serif 4',Georgia,serif;
+--sans:'DM Sans',system-ui,sans-serif;
+--mono:'JetBrains Mono',monospace;
+--radius:10px;--radius-lg:14px;
+--shadow:0 1px 3px rgba(0,0,0,0.06),0 1px 2px rgba(0,0,0,0.04);
+--shadow-lg:0 4px 12px rgba(0,0,0,0.08),0 2px 4px rgba(0,0,0,0.04);
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--sans);color:var(--text);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
+
+/* NAV */
+.topbar{position:sticky;top:0;z-index:100;background:rgba(250,250,247,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:0 24px}
+.topbar-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px}
+.topbar .logo{font-family:var(--serif);font-weight:700;font-size:15px;color:var(--accent-dark);letter-spacing:-0.02em;white-space:nowrap}
+.topbar .logo span{color:var(--text3);font-weight:400;font-size:13px;margin-left:8px}
+.nav-links{display:flex;gap:2px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{font-size:13px;font-weight:500;color:var(--text2);padding:8px 12px;border-radius:6px;text-decoration:none;white-space:nowrap;transition:all 0.15s}
+.nav-links a:hover{background:var(--bg2);color:var(--text)}
+.nav-links a.active{background:var(--accent-light);color:var(--accent-dark)}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#0F4A32 0%,#1B6B4A 40%,#237A56 100%);color:#fff;padding:64px 24px 56px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-40%;right:-10%;width:500px;height:500px;border-radius:50%;background:rgba(255,255,255,0.04)}
+.hero::after{content:'';position:absolute;bottom:-60%;left:-5%;width:600px;height:600px;border-radius:50%;background:rgba(255,255,255,0.03)}
+.hero-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1}
+.hero h1{font-family:var(--serif);font-size:clamp(28px,4vw,40px);font-weight:700;line-height:1.2;margin-bottom:12px;letter-spacing:-0.02em}
+.hero .subtitle{font-size:17px;opacity:0.85;max-width:640px;line-height:1.5}
+.hero .badge-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.hero .badge{background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.2);border-radius:20px;padding:5px 14px;font-size:12px;font-weight:500;letter-spacing:0.02em}
+
+/* MAIN */
+.main{max-width:1100px;margin:0 auto;padding:40px 24px 80px}
+section{margin-bottom:56px;scroll-margin-top:72px}
+section h2{font-family:var(--serif);font-size:24px;font-weight:700;color:var(--text);margin-bottom:6px;letter-spacing:-0.01em;display:flex;align-items:center;gap:10px}
+section h2 .num{font-family:var(--mono);font-size:14px;font-weight:500;color:var(--accent);background:var(--accent-light);border-radius:6px;padding:3px 8px;letter-spacing:0}
+section h3{font-size:17px;font-weight:600;color:var(--text);margin:24px 0 10px}
+section h4{font-size:15px;font-weight:600;color:var(--text2);margin:18px 0 8px}
+section p{color:var(--text2);margin-bottom:14px;max-width:780px}
+
+/* CARDS */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin:20px 0}
+.card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;box-shadow:var(--shadow);transition:box-shadow 0.2s}
+.card:hover{box-shadow:var(--shadow-lg)}
+.card .tag{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.06em;padding:3px 10px;border-radius:12px;display:inline-block;margin-bottom:10px}
+.tag-uro{background:var(--blue-light);color:var(--blue-dark)}
+.tag-colo{background:var(--coral-light);color:var(--coral-dark)}
+.tag-all{background:var(--purple-light);color:var(--purple-dark)}
+.card h4{font-size:16px;font-weight:600;color:var(--text);margin:0 0 8px}
+.card p{font-size:14px;color:var(--text2);margin:0;line-height:1.55}
+
+/* FLOWCHART */
+.flow-container{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px 20px;box-shadow:var(--shadow);overflow-x:auto;margin:20px 0}
+.flow-row{display:flex;justify-content:center;gap:12px;margin-bottom:8px;flex-wrap:wrap}
+.flow-arrow{text-align:center;color:var(--text3);font-size:20px;margin:4px 0}
+.flow-box{border-radius:var(--radius);padding:14px 18px;text-align:center;min-width:180px;max-width:260px;flex:1;cursor:default;transition:transform 0.15s,box-shadow 0.15s}
+.flow-box:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.flow-box .fb-title{font-size:14px;font-weight:600;margin-bottom:3px}
+.flow-box .fb-sub{font-size:12px;opacity:0.8}
+.fb-blue{background:var(--blue-light);border:1px solid #B5D4F4;color:var(--blue-dark)}
+.fb-teal{background:var(--accent-light);border:1px solid #9FE1CB;color:var(--accent-dark)}
+.fb-coral{background:var(--coral-light);border:1px solid #F5C4B3;color:var(--coral-dark)}
+.fb-purple{background:var(--purple-light);border:1px solid #CECBF6;color:var(--purple-dark)}
+.fb-amber{background:var(--amber-light);border:1px solid #FAC775;color:var(--amber-dark)}
+.fb-green{background:#E8F5E9;border:1px solid #A5D6A7;color:#2E7D32}
+.fb-red{background:var(--red-light);border:1px solid #F7C1C1;color:var(--red)}
+.fb-gray{background:var(--bg2);border:1px solid var(--border);color:var(--text2)}
+.flow-label{text-align:center;font-size:13px;color:var(--text3);font-style:italic;margin:8px 0}
+.flow-branch{display:flex;justify-content:center;gap:40px;margin:8px 0;flex-wrap:wrap}
+.flow-branch-item{text-align:center}
+.flow-branch-item .branch-label{font-size:12px;font-weight:600;color:var(--text3);margin-bottom:6px}
+
+/* TABLES */
+.table-wrap{overflow-x:auto;margin:16px 0;border-radius:var(--radius-lg);border:1px solid var(--border);box-shadow:var(--shadow)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+thead{background:var(--bg2)}
+th{font-weight:600;color:var(--text);padding:12px 16px;text-align:left;border-bottom:2px solid var(--border);white-space:nowrap;font-size:13px}
+td{padding:11px 16px;border-bottom:1px solid var(--bg3);color:var(--text2);vertical-align:top}
+tbody tr:hover{background:var(--accent-light)}
+tbody tr:last-child td{border-bottom:none}
+
+/* PERFECT TABLE */
+.perfect-grid{display:grid;grid-template-columns:60px 1fr 100px;gap:0;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin:16px 0}
+.perfect-grid .pg-header{background:var(--accent);color:#fff;font-size:13px;font-weight:600;padding:10px 14px}
+.perfect-grid .pg-cell{padding:12px 14px;font-size:14px;border-bottom:1px solid var(--bg3);display:flex;align-items:center}
+.perfect-grid .pg-letter{font-family:var(--mono);font-size:22px;font-weight:700;color:var(--accent);justify-content:center}
+.perfect-grid .pg-desc{color:var(--text2)}
+.perfect-grid .pg-range{font-family:var(--mono);font-size:13px;color:var(--text3);justify-content:center}
+
+/* OXFORD */
+.oxford-scale{display:flex;gap:4px;margin:16px 0;flex-wrap:wrap}
+.oxford-item{flex:1;min-width:90px;text-align:center;padding:14px 8px;border-radius:var(--radius);border:1px solid var(--border)}
+.oxford-item .grade{font-family:var(--mono);font-size:24px;font-weight:700;margin-bottom:4px}
+.oxford-item .desc{font-size:11px;color:var(--text2);line-height:1.3}
+.ox0{background:#FAFAFA;border-color:#E0E0E0}.ox0 .grade{color:#999}
+.ox1{background:#FFF8E1;border-color:#FFE082}.ox1 .grade{color:#F9A825}
+.ox2{background:#FFF3E0;border-color:#FFCC80}.ox2 .grade{color:#EF6C00}
+.ox3{background:#E8F5E9;border-color:#A5D6A7}.ox3 .grade{color:#2E7D32}
+.ox4{background:#E3F2FD;border-color:#90CAF9}.ox4 .grade{color:#1565C0}
+.ox5{background:var(--accent-light);border-color:#80CBC4}.ox5 .grade{color:var(--accent-dark)}
+
+/* ACCORDION */
+.accordion{border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;margin:16px 0}
+.acc-item{border-bottom:1px solid var(--border)}
+.acc-item:last-child{border-bottom:none}
+.acc-header{background:#fff;padding:16px 20px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;font-size:15px;font-weight:600;color:var(--text);transition:background 0.15s;user-select:none}
+.acc-header:hover{background:var(--bg2)}
+.acc-header .chevron{transition:transform 0.2s;font-size:18px;color:var(--text3)}
+.acc-item.open .acc-header{background:var(--bg2)}
+.acc-item.open .chevron{transform:rotate(180deg)}
+.acc-body{max-height:0;overflow:hidden;transition:max-height 0.35s ease}
+.acc-item.open .acc-body{max-height:3000px}
+.acc-body-inner{padding:0 20px 20px;font-size:14px;color:var(--text2);line-height:1.6}
+.acc-body-inner p{margin-bottom:10px;max-width:none}
+.acc-body-inner ul{margin:8px 0 12px 20px}
+.acc-body-inner li{margin-bottom:6px}
+.acc-body-inner strong{color:var(--text)}
+
+/* PHASE TIMELINE */
+.timeline{position:relative;margin:24px 0 24px 20px;padding-left:28px;border-left:2px solid var(--accent-light)}
+.tl-item{position:relative;margin-bottom:28px}
+.tl-item::before{content:'';position:absolute;left:-35px;top:4px;width:14px;height:14px;border-radius:50%;background:var(--accent);border:3px solid var(--accent-light)}
+.tl-item .tl-time{font-family:var(--mono);font-size:12px;font-weight:500;color:var(--accent);margin-bottom:4px}
+.tl-item .tl-title{font-size:16px;font-weight:600;color:var(--text);margin-bottom:6px}
+.tl-item .tl-desc{font-size:14px;color:var(--text2);line-height:1.55}
+
+/* DOWNLOADS */
+.download-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:20px 0}
+.dl-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:18px;display:flex;align-items:center;gap:14px;cursor:pointer;transition:all 0.15s;text-decoration:none;color:var(--text)}
+.dl-card:hover{border-color:var(--accent);box-shadow:var(--shadow-lg);transform:translateY(-1px)}
+.dl-icon{width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.dl-icon-pdf{background:#FDE8E8;color:#C62828}
+.dl-icon-doc{background:#E3F2FD;color:#1565C0}
+.dl-card .dl-name{font-size:14px;font-weight:600}
+.dl-card .dl-desc{font-size:12px;color:var(--text3)}
+
+/* CALLOUT */
+.callout{border-left:3px solid var(--accent);background:var(--accent-light);border-radius:0 var(--radius) var(--radius) 0;padding:16px 20px;margin:16px 0;font-size:14px;color:var(--accent-dark);line-height:1.55}
+.callout.callout-amber{border-left-color:var(--amber);background:var(--amber-light);color:var(--amber-dark)}
+.callout.callout-blue{border-left-color:var(--blue);background:var(--blue-light);color:var(--blue-dark)}
+.callout strong{font-weight:600}
+
+/* FOOTER */
+.footer{background:var(--bg2);border-top:1px solid var(--border);padding:32px 24px;text-align:center}
+.footer p{font-size:13px;color:var(--text3);margin:4px 0}
+
+/* MOBILE */
+@media(max-width:768px){
+.topbar-inner{flex-direction:column;height:auto;padding:10px 0;gap:8px}
+.nav-links{width:100%}
+.hero{padding:40px 20px 36px}
+.card-grid{grid-template-columns:1fr}
+.flow-row{flex-direction:column;align-items:center}
+.flow-box{max-width:100%;min-width:auto}
+.oxford-scale{flex-direction:column}
+.perfect-grid{grid-template-columns:50px 1fr 70px}
+.flow-branch{flex-direction:column;align-items:center;gap:12px}
+}
+
+/* PRINT */
+@media print{
+.topbar,.hero{display:none}
+.acc-body{max-height:none!important}
+body{font-size:12px}
+}
+
+/* CHECKLIST */
+.checklist-group{margin:16px 0}
+.checklist-group h4{font-size:14px;font-weight:600;color:var(--accent-dark);background:var(--accent-light);padding:8px 14px;border-radius:var(--radius) var(--radius) 0 0;margin:0;border:1px solid #C2E0D1;border-bottom:none}
+.checklist-group.cg-blue h4{color:var(--blue-dark);background:var(--blue-light);border-color:#B5D4F4}
+.checklist-group.cg-coral h4{color:var(--coral-dark);background:var(--coral-light);border-color:#F5C4B3}
+.checklist-group.cg-purple h4{color:var(--purple-dark);background:var(--purple-light);border-color:#CECBF6}
+.checklist-group.cg-amber h4{color:var(--amber-dark);background:var(--amber-light);border-color:#FAC775}
+.cl-list{list-style:none;border:1px solid var(--border);border-radius:0 0 var(--radius) var(--radius);overflow:hidden;margin:0;padding:0}
+.cl-list li{padding:9px 14px 9px 38px;font-size:14px;color:var(--text2);border-bottom:1px solid var(--bg3);position:relative;line-height:1.5;background:#fff}
+.cl-list li:last-child{border-bottom:none}
+.cl-list li::before{content:'';position:absolute;left:14px;top:13px;width:14px;height:14px;border:1.5px solid var(--border2);border-radius:3px;background:#fff}
+.cl-list li strong{color:var(--text);font-weight:600}
+.cl-list li .cl-detail{display:block;font-size:12px;color:var(--text3);margin-top:2px}
+.cl-sub{margin:12px 0 12px 20px;font-size:13px;color:var(--text3);font-style:italic}
+
+/* EF SECTIONS */
+.ef-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px;margin:16px 0}
+.ef-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow)}
+.ef-card-header{padding:12px 16px;font-size:14px;font-weight:600;border-bottom:1px solid var(--border)}
+.ef-card-header.efh-green{background:var(--accent-light);color:var(--accent-dark)}
+.ef-card-header.efh-blue{background:var(--blue-light);color:var(--blue-dark)}
+.ef-card-header.efh-purple{background:var(--purple-light);color:var(--purple-dark)}
+.ef-card-header.efh-amber{background:var(--amber-light);color:var(--amber-dark)}
+.ef-card-header.efh-coral{background:var(--coral-light);color:var(--coral-dark)}
+.ef-card-body{padding:0}
+.ef-card-body .cl-list{border:none;border-radius:0}
+.ef-card-body .cl-list li:last-child{border-bottom:none}
+
+/* FORM */
+.fm-group{display:flex;flex-direction:column;gap:4px}
+.fm-label{font-size:12px;font-weight:600;color:var(--text2);letter-spacing:0.02em}
+.fm-input{font-family:var(--sans);font-size:14px;color:var(--text);padding:9px 12px;border:1px solid var(--border);border-radius:6px;background:#fff;transition:border-color 0.15s;outline:none;width:100%}
+.fm-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(27,107,74,0.1)}
+.fm-input::placeholder{color:var(--text3);font-size:13px}
+select.fm-input{cursor:pointer;appearance:auto}
+textarea.fm-input{resize:vertical;min-height:44px}
+.fm-check{display:flex;align-items:center;gap:6px;font-size:14px;color:var(--text2);cursor:pointer;padding:4px 10px;border:1px solid var(--border);border-radius:6px;background:#fff;transition:all 0.15s;user-select:none}
+.fm-check:has(input:checked){background:var(--accent-light);border-color:var(--accent);color:var(--accent-dark)}
+.fm-check input{cursor:pointer;accent-color:var(--accent)}
+
+/* FORM - Nota clínica */
+.form-section{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;margin:16px 0;box-shadow:var(--shadow)}
+.form-section h4{font-size:15px;font-weight:600;color:var(--accent-dark);margin:0 0 14px;padding-bottom:8px;border-bottom:1px solid var(--bg3)}
+.form-row{display:flex;gap:12px;margin-bottom:12px;flex-wrap:wrap}
+.form-group{flex:1;min-width:200px}
+.form-group label{display:block;font-size:12px;font-weight:600;color:var(--text3);margin-bottom:4px;text-transform:uppercase;letter-spacing:0.04em}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:9px 12px;border:1px solid var(--border);border-radius:6px;font-family:var(--sans);font-size:14px;color:var(--text);background:var(--bg);transition:border-color 0.15s}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(27,107,74,0.1)}
+.form-group textarea{resize:vertical;min-height:60px}
+.form-group select{appearance:auto}
+.form-group.fg-full{flex:1 1 100%;min-width:100%}
+.form-inline-checks{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.form-inline-checks label{display:flex;align-items:center;gap:5px;font-size:13px;color:var(--text2);font-weight:400;text-transform:none;letter-spacing:0;cursor:pointer;padding:4px 10px;border:1px solid var(--border);border-radius:16px;transition:all 0.15s;user-select:none}
+.form-inline-checks label:has(input:checked){background:var(--accent-light);border-color:var(--accent);color:var(--accent-dark)}
+.form-inline-checks input[type="checkbox"]{display:none}
+.form-divider{border:none;border-top:1px dashed var(--border);margin:20px 0}
+.form-oxford-row{display:flex;gap:6px;margin-top:4px}
+.form-oxford-btn{width:44px;height:38px;border:1px solid var(--border);border-radius:6px;background:#fff;font-family:var(--mono);font-size:16px;font-weight:600;color:var(--text2);cursor:pointer;transition:all 0.15s}
+.form-oxford-btn:hover{border-color:var(--accent)}
+.form-oxford-btn.selected{background:var(--accent);color:#fff;border-color:var(--accent)}
+.perfect-input{width:60px!important;text-align:center;font-family:var(--mono)!important;font-size:16px!important}
+.btn-generate{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;border:none;padding:14px 28px;border-radius:var(--radius);font-family:var(--sans);font-size:15px;font-weight:600;cursor:pointer;transition:all 0.15s;margin-top:8px}
+.btn-generate:hover{background:var(--accent-dark);transform:translateY(-1px);box-shadow:var(--shadow-lg)}
+.btn-copy{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;border:none;padding:12px 24px;border-radius:var(--radius);font-family:var(--sans);font-size:14px;font-weight:600;cursor:pointer;transition:all 0.15s;margin-top:12px}
+.btn-copy:hover{background:var(--blue-dark)}
+.btn-copy.copied{background:#2E7D32}
+.note-output{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-top:16px;font-family:var(--mono);font-size:13px;line-height:1.7;color:var(--text);white-space:pre-wrap;display:none;max-height:600px;overflow-y:auto}
+.note-output.visible{display:block}
+.btn-clear{display:inline-flex;align-items:center;gap:6px;background:transparent;color:var(--text3);border:1px solid var(--border);padding:10px 20px;border-radius:var(--radius);font-family:var(--sans);font-size:13px;font-weight:500;cursor:pointer;transition:all 0.15s;margin-top:12px;margin-left:8px}
+.btn-clear:hover{background:var(--red-light);border-color:var(--red);color:var(--red)}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<nav class="topbar">
+<div class="topbar-inner">
+<div class="logo">Rehabilitación Piso Pélvico<span>HG Gea González</span></div>
+<div class="nav-links">
+<a href="#algoritmo">Algoritmo</a>
+<a href="#evaluacion">Evaluación</a>
+<a href="#protocolo">Protocolo</a>
+<a href="#electro">Electroestimulación</a>
+<a href="#seguimiento">Seguimiento</a>
+<a href="#formato">Nota clínica</a>
+<a href="#descargas">Descargas</a>
+</div>
+</div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+<div class="hero-inner">
+<h1>Guía Clínica de Rehabilitación de Piso Pélvico</h1>
+<p class="subtitle">Protocolo de atención basado en evidencia para pacientes con incontinencia urinaria y fecal referidos de Urología y Coloproctología.</p>
+<div class="badge-row">
+<span class="badge">AUA/GURS/SUFU 2024</span>
+<span class="badge">AUA/SUFU OAB 2024</span>
+<span class="badge">ICS Consensus</span>
+<span class="badge">APTA Pelvic Health 2023</span>
+<span class="badge">UEG/ESNM 2024</span>
+</div>
+</div>
+</header>
+
+<main class="main">
+
+<!-- ==================== ALGORITMO ==================== -->
+<section id="algoritmo">
+<h2><span class="num">01</span> Algoritmo de atención</h2>
+<p>Flujo completo desde la referencia hasta el alta o escalamiento. Las tres vías de entrada convergen en una evaluación estandarizada y un plan terapéutico individualizado.</p>
+
+<div class="flow-container">
+
+<div class="flow-label">Vías de referencia</div>
+<div class="flow-row">
+<div class="flow-box fb-blue"><div class="fb-title">Urología</div><div class="fb-sub">Post-prostatectomía radical</div></div>
+<div class="flow-box fb-teal"><div class="fb-title">Urología</div><div class="fb-sub">IU no quirúrgica (esfuerzo, urgencia, mixta)</div></div>
+<div class="flow-box fb-coral"><div class="fb-title">Coloproctología</div><div class="fb-sub">Incontinencia fecal / LARS</div></div>
+</div>
+
+<div class="flow-arrow">&#8595;</div>
+
+<div class="flow-row">
+<div class="flow-box fb-purple" style="max-width:420px"><div class="fb-title">Evaluación inicial en rehabilitación</div><div class="fb-sub">Médico rehabilitador + terapeuta de piso pélvico</div></div>
+</div>
+
+<div class="flow-arrow">&#8595;</div>
+
+<div class="flow-row">
+<div class="flow-box fb-gray" style="max-width:520px">
+<div class="fb-title">Componentes de evaluación</div>
+<div class="fb-sub">Historia clínica dirigida · Cuestionarios (ICIQ-SF / Wexner / FIQL) · Esquema PERFECT + Oxford · Pad test 1h · EMG diagnóstica (casos seleccionados) · Electroestimulación diagnóstica</div>
+</div>
+</div>
+
+<div class="flow-arrow">&#8595;</div>
+
+<div class="flow-label">Clasificación de severidad</div>
+<div class="flow-row">
+<div class="flow-box fb-green"><div class="fb-title">Leve</div><div class="fb-sub">1-2 pads/día</div></div>
+<div class="flow-box fb-amber"><div class="fb-title">Moderada</div><div class="fb-sub">2-4 pads/día</div></div>
+<div class="flow-box fb-red"><div class="fb-title">Severa</div><div class="fb-sub">5+ pads/día</div></div>
+</div>
+
+<div class="flow-arrow">&#8595;</div>
+
+<div class="flow-row">
+<div class="flow-box fb-purple" style="max-width:420px"><div class="fb-title">Plan terapéutico multimodal</div><div class="fb-sub">Prescripción individualizada según vía y severidad</div></div>
+</div>
+
+<div class="flow-arrow">&#8595;</div>
+
+<div class="flow-row">
+<div class="flow-box fb-teal"><div class="fb-title">PFMT guiado</div><div class="fb-sub">Kegel + esquema PERFECT</div></div>
+<div class="flow-box fb-teal"><div class="fb-title">Electroestimulación</div><div class="fb-sub">TENS/EMS perineal</div></div>
+<div class="flow-box fb-teal"><div class="fb-title">Terapia manual</div><div class="fb-sub">Liberación miofascial</div></div>
+</div>
+<div class="flow-row" style="margin-top:8px">
+<div class="flow-box fb-teal"><div class="fb-title">Reentrenamiento</div><div class="fb-sub">Vesical / intestinal</div></div>
+<div class="flow-box fb-teal"><div class="fb-title">Educación</div><div class="fb-sub">Hábitos + supresión urgencia</div></div>
+</div>
+
+<div class="flow-arrow">&#8595;</div>
+
+<div class="flow-label">Reevaluación programada</div>
+<div class="flow-row">
+<div class="flow-box fb-amber"><div class="fb-title">4 semanas</div><div class="fb-sub">Ajuste técnica y parámetros</div></div>
+<div class="flow-box fb-amber"><div class="fb-title">12 semanas</div><div class="fb-sub">Revaloración formal completa</div></div>
+<div class="flow-box fb-amber"><div class="fb-title">6-12 meses</div><div class="fb-sub">Alta o escalamiento</div></div>
+</div>
+
+<div class="flow-arrow">&#8595;</div>
+
+<div class="flow-row">
+<div class="flow-box fb-purple" style="max-width:340px"><div class="fb-title">¿Mejoría ≥ 50% en pad test?</div></div>
+</div>
+
+<div class="flow-branch">
+<div class="flow-branch-item">
+<div class="branch-label">&#10003; Sí</div>
+<div class="flow-box fb-green" style="margin:0 auto"><div class="fb-title">Continuar PFMT</div><div class="fb-sub">Progresión + HEP autónomo → Alta</div></div>
+</div>
+<div class="flow-branch-item">
+<div class="branch-label">&#10007; No</div>
+<div class="flow-box fb-red" style="margin:0 auto"><div class="fb-title">Escalar manejo</div><div class="fb-sub">Reenvío urología/coloproctología · Neuromodulación · Cirugía</div></div>
+</div>
+</div>
+
+</div>
+
+<div class="callout">
+<strong>Nota para IU de urgencia / vejiga hiperactiva:</strong> Agregar entrenamiento vesical + técnicas de supresión de urgencia (reflejo perineo-detrusor). Si no responde a terapia conductual en 4-8 semanas, coordinar con Urología para farmacoterapia (anticolinérgicos / agonistas β3).
+</div>
+</section>
+
+<!-- ==================== EVALUACIÓN ==================== -->
+<section id="evaluacion">
+<h2><span class="num">02</span> Evaluación inicial</h2>
+<p>Evaluación conjunta médico rehabilitador + terapeuta físico. Completar en primera o segunda consulta. A continuación se presentan los componentes como checklist de consulta rápida.</p>
+
+<!-- ===== INTERROGATORIO ===== -->
+<h3>2.1 Interrogatorio dirigido</h3>
+
+<div class="checklist-group">
+<h4>&#9635; Datos de referencia y antecedente quirúrgico</h4>
+<ul class="cl-list">
+<li><strong>Diagnóstico de referencia</strong><span class="cl-detail">¿Quién refiere? (Urología / Coloproctología) · Diagnóstico específico</span></li>
+<li><strong>Tipo de cirugía realizada</strong><span class="cl-detail">Prostatectomía radical (abierta / laparoscópica / robótica) · Preservación de bandeletas nerviosas (sí/no/unilateral) · Resección anterior baja · Esfinteroplastía · Otra cirugía pélvica</span></li>
+<li><strong>Tiempo transcurrido desde la cirugía</strong><span class="cl-detail">Fecha de cirugía · Fecha de retiro de sonda Foley · Semanas/meses postoperatorios</span></li>
+<li><strong>Radioterapia pélvica</strong><span class="cl-detail">¿Recibió/recibe RT adyuvante o de rescate? · Tipo (externa / braquiterapia) · Dosis y fecha</span></li>
+</ul>
+</div>
+
+<div class="checklist-group cg-blue">
+<h4>&#9635; Caracterización de la incontinencia</h4>
+<ul class="cl-list">
+<li><strong>Tipo de incontinencia urinaria</strong><span class="cl-detail">¿Pierde orina al toser, estornudar, hacer esfuerzo? (esfuerzo) · ¿Tiene urgencia súbita incontrolable? (urgencia) · ¿Ambos? (mixta) · ¿Pérdida continua sin esfuerzo ni urgencia? (continua/total)</span></li>
+<li><strong>Tipo de incontinencia fecal</strong><span class="cl-detail">¿Pérdida de gases? · ¿Líquidos? · ¿Sólidos? · ¿Urgencia defecatoria con escape? · ¿Escape pasivo sin darse cuenta?</span></li>
+<li><strong>Severidad cuantificada</strong><span class="cl-detail">Número de pads/día (urinaria) · Número de episodios de escape/semana (fecal) · Necesidad de cambio de ropa</span></li>
+<li><strong>Temporalidad</strong><span class="cl-detail">¿Desde cuándo? · ¿Ha empeorado, mejorado o se mantiene? · ¿Predominio diurno o nocturno?</span></li>
+<li><strong>Factores desencadenantes</strong><span class="cl-detail">Esfuerzo físico · Cambios de posición · Tos/estornudo · Caminar · Ejercicio · Relaciones sexuales · Ingesta de ciertos alimentos</span></li>
+</ul>
+</div>
+
+<div class="checklist-group cg-purple">
+<h4>&#9635; Síntomas asociados</h4>
+<ul class="cl-list">
+<li><strong>Síntomas urinarios de llenado</strong><span class="cl-detail">Urgencia · Frecuencia diurna (número de micciones/día) · Nocturia (número de veces/noche) · Sensación de vaciamiento incompleto</span></li>
+<li><strong>Síntomas urinarios de vaciamiento</strong><span class="cl-detail">Chorro débil · Intermitencia · Pujo para orinar · Goteo postmiccional</span></li>
+<li><strong>Síntomas intestinales</strong><span class="cl-detail">Estreñimiento (Bristol 1-2) · Diarrea (Bristol 6-7) · Pujo defecatorio · Sensación de evacuación incompleta · Urgencia defecatoria · Frecuencia de evacuaciones/día</span></li>
+<li><strong>Dolor pélvico/perineal</strong><span class="cl-detail">Localización · Intensidad (EVA) · ¿Dolor al sentarse? · ¿Dolor con la micción/evacuación? · ¿Dispareunia?</span></li>
+<li><strong>Función sexual</strong><span class="cl-detail">Disfunción eréctil · Climacturia (escape urinario con orgasmo) · Incontinencia fecal durante relaciones sexuales</span></li>
+</ul>
+</div>
+
+<div class="checklist-group cg-amber">
+<h4>&#9635; Comorbilidades y factores modificables</h4>
+<ul class="cl-list">
+<li><strong>Comorbilidades relevantes</strong><span class="cl-detail">Diabetes mellitus (tipo, control glucémico, neuropatía) · Obesidad (IMC) · Enfermedad neurológica (EVC, Parkinson, lesión medular, EM) · EPOC/tos crónica · Cirugías pélvicas previas</span></li>
+<li><strong>Medicación actual</strong><span class="cl-detail">Diuréticos · Anticolinérgicos · Inhibidores SGLT2 · Agonistas β3 · Opioides · Laxantes · Antidepresivos (ISRS) · Alfa-bloqueadores</span></li>
+<li><strong>Hábitos</strong><span class="cl-detail">Ingesta hídrica diaria (tipo y volumen) · Consumo de cafeína · Consumo de alcohol · Tabaquismo · Actividad física habitual · ¿Carga objetos pesados habitualmente?</span></li>
+<li><strong>Estado funcional y calidad de vida</strong><span class="cl-detail">Impacto en actividades cotidianas · Restricción social · Ausentismo laboral · Uso de protección (tipo y cantidad) · Estado emocional (ansiedad, depresión, aislamiento)</span></li>
+</ul>
+</div>
+
+<div class="checklist-group">
+<h4>&#9635; Estudios previos (solicitar resultados si existen)</h4>
+<ul class="cl-list">
+<li><strong>Estudio urodinámico</strong><span class="cl-detail">¿Se realizó? · Resultado: presión de cierre uretral, capacidad vesical, presencia de hiperactividad del detrusor, compliance</span></li>
+<li><strong>Manometría anorrectal</strong><span class="cl-detail">¿Se realizó? · Resultado: presión de reposo, presión de contracción, sensibilidad rectal, reflejo recto-anal inhibitorio (RAIR)</span></li>
+<li><strong>Imagen pélvica</strong><span class="cl-detail">Defecografía · RM de piso pélvico · Ultrasonido endoanal · Cistografía</span></li>
+<li><strong>Reporte de patología</strong><span class="cl-detail">Estadio patológico (pT) · Márgenes · Gleason/ISUP · Extensión extraprostática</span></li>
+</ul>
+</div>
+
+<!-- ===== EXPLORACIÓN FÍSICA ===== -->
+<h3>2.2 Exploración física</h3>
+
+<div class="ef-grid">
+
+<!-- General -->
+<div class="ef-card">
+<div class="ef-card-header efh-green">&#9635; Inspección general y signos vitales</div>
+<div class="ef-card-body">
+<ul class="cl-list">
+<li><strong>Peso, talla, IMC</strong><span class="cl-detail">Obesidad = factor de riesgo modificable para IU</span></li>
+<li><strong>Marcha y movilidad</strong><span class="cl-detail">¿Limitación para acceso rápido al baño? · Velocidad de marcha · Uso de auxiliar</span></li>
+<li><strong>Estado general</strong><span class="cl-detail">Condición física global · Capacidad para ejercicio terapéutico</span></li>
+</ul>
+</div>
+</div>
+
+<!-- Abdomen -->
+<div class="ef-card">
+<div class="ef-card-header efh-blue">&#9635; Exploración abdominal</div>
+<div class="ef-card-body">
+<ul class="cl-list">
+<li><strong>Inspección</strong><span class="cl-detail">Cicatrices quirúrgicas (localización, estado) · Distensión abdominal · Hernias</span></li>
+<li><strong>Palpación</strong><span class="cl-detail">Globo vesical · Masas abdominales · Dolor a la palpación suprapúbica · Fecalomas palpables</span></li>
+<li><strong>Patrón respiratorio</strong><span class="cl-detail">¿Respiración diafragmática o torácica superior? · ¿Uso excesivo de musculatura accesoria? (Relevante: patrón respiratorio influye en presión intraabdominal y coordinación con piso pélvico)</span></li>
+<li><strong>Función de pared abdominal</strong><span class="cl-detail">Tono · Diástasis de rectos (distancia interrectos) · Capacidad de activación transverso abdominal</span></li>
+</ul>
+</div>
+</div>
+
+<!-- Neurológico -->
+<div class="ef-card">
+<div class="ef-card-header efh-purple">&#9635; Exploración neurológica dirigida</div>
+<div class="ef-card-body">
+<ul class="cl-list">
+<li><strong>Sensibilidad perineal</strong><span class="cl-detail">Dermatomas S2-S4 · Tacto ligero y pinchazo en periné, cara interna de muslos, región perianal</span></li>
+<li><strong>Reflejo bulbocavernoso</strong><span class="cl-detail">Compresión del glande → contracción del esfínter anal externo · Presente/Ausente (valora integridad del arco reflejo S2-S4)</span></li>
+<li><strong>Reflejo anal cutáneo (anocutáneo)</strong><span class="cl-detail">Roce perianal → contracción visible del esfínter anal externo ("guiño anal") · Presente/Ausente · Simétrico/Asimétrico</span></li>
+<li><strong>Reflejo cremastérico</strong><span class="cl-detail">Roce cara interna del muslo → elevación testicular ipsilateral (L1-L2)</span></li>
+<li><strong>Tono del esfínter anal en reposo</strong><span class="cl-detail">Normal / Disminuido / Aumentado (valora esfínter anal interno, inervación autonómica)</span></li>
+<li><strong>Contracción voluntaria del esfínter anal</strong><span class="cl-detail">Pedir al paciente que "apriete como si quisiera retener gas" · Presente/Ausente · Fuerza (valora esfínter anal externo, inervación pudenda S2-S4)</span></li>
+</ul>
+</div>
+</div>
+
+<!-- Musculoesquelético -->
+<div class="ef-card">
+<div class="ef-card-header efh-amber">&#9635; Exploración musculoesquelética</div>
+<div class="ef-card-body">
+<ul class="cl-list">
+<li><strong>Columna lumbosacra</strong><span class="cl-detail">Dolor a la palpación · Movilidad · Cicatrices quirúrgicas · Signos de alarma (considerar patología neurológica)</span></li>
+<li><strong>Articulación sacroilíaca</strong><span class="cl-detail">Dolor · Movilidad · Pruebas provocativas (relación biomecánica con piso pélvico)</span></li>
+<li><strong>Cadera</strong><span class="cl-detail">Rango de movimiento · Dolor · Contractura de aductores/rotadores (pueden contribuir a disfunción de piso pélvico)</span></li>
+<li><strong>Musculatura pélvica accesoria</strong><span class="cl-detail">Tono de aductores · Tono de glúteos · Tono de obturador interno (palpable por vía rectal) · Puntos gatillo en piriforme</span></li>
+<li><strong>Postura global</strong><span class="cl-detail">Alineación pélvica · Hiperlordosis / rectificación lumbar · Inclinación pélvica (relación con posición de piso pélvico)</span></li>
+</ul>
+</div>
+</div>
+
+<!-- Perineal específica -->
+<div class="ef-card" style="grid-column:1/-1">
+<div class="ef-card-header efh-coral">&#9635; Exploración específica de piso pélvico y perineal</div>
+<div class="ef-card-body">
+<ul class="cl-list">
+<li><strong>Inspección perineal</strong><span class="cl-detail">Piel (irritación, dermatitis por humedad, maceración por uso de pads) · Cicatrices perineales/quirúrgicas · Simetría perineal · Presencia de hemorroides, fisuras, fístulas · Prolapso rectal visible</span></li>
+<li><strong>Observación dinámica del periné</strong><span class="cl-detail">Pedir al paciente que contraiga piso pélvico: ¿se observa retracción perineal hacia cefálico? (elevación del periné = contracción correcta) · ¿Elevación testicular durante contracción? · ¿Descenso paradójico? (pujo en vez de contracción = inversión del comando, muy frecuente)</span></li>
+<li><strong>Maniobra de Valsalva</strong><span class="cl-detail">Observar: ¿descenso perineal excesivo? · ¿Protrusión anal? · ¿Escape urinario visible con la tos? (confirma IU de esfuerzo)</span></li>
+<li><strong>Evaluación digital rectal</strong><span class="cl-detail">Tono en reposo del esfínter anal (normal/hipo/hipertónico) · Contracción voluntaria: pedir "apriete mi dedo" → evaluar fuerza (Oxford 0-5) y duración · Capacidad de relajación post-contracción · ¿Contracción paradójica (anismo/disinergia)? → el paciente puja en vez de relajar · Palpación de puborrectal: tono, simetría, puntos dolorosos · Palpación de obturador interno (accesible lateralmente) · Masas, irregularidades, dolor</span></li>
+<li><strong>Prueba de la tos (Cough Stress Test)</strong><span class="cl-detail">Vejiga cómodamente llena · Paciente de pie o sedente · Pedir que tosa vigorosamente · Observar escape urinario por meato: positivo = IU de esfuerzo confirmada</span></li>
+<li><strong>Co-contracción</strong><span class="cl-detail">Durante contracción de piso pélvico: ¿el paciente contrae simultáneamente glúteos, aductores o abdominales? · Objetivo del entrenamiento: aislar la contracción del piso pélvico</span></li>
+</ul>
+</div>
+</div>
+
+<!-- Urológica/Coloproctológica básica -->
+<div class="ef-card" style="grid-column:1/-1">
+<div class="ef-card-header efh-blue">&#9635; Verificación urológica / coloproctológica básica (para el rehabilitador)</div>
+<div class="ef-card-body">
+<ul class="cl-list">
+<li><strong>Verificar reporte de PSA postoperatorio</strong><span class="cl-detail">¿Control oncológico adecuado? · PSA indetectable = buena evolución · PSA en ascenso = comunicar a Urología (posible recurrencia bioquímica)</span></li>
+<li><strong>Verificar estudios urodinámicos si existen</strong><span class="cl-detail">Capacidad vesical · Compliance vesical · Presencia de contracciones involuntarias del detrusor (orienta a componente de urgencia) · Presión de punto de fuga (Valsalva leak point pressure) · Residuo postmiccional</span></li>
+<li><strong>Verificar manometría anorrectal si existe</strong><span class="cl-detail">Presión de reposo anal (&lt; 40 mmHg sugiere debilidad EAI) · Presión de contracción voluntaria · Longitud del canal anal funcional · Sensibilidad rectal (umbrales de primera sensación, urgencia y tolerancia máxima) · RAIR presente/ausente</span></li>
+<li><strong>Verificar ultrasonido endoanal si existe</strong><span class="cl-detail">Defecto del esfínter anal interno / externo · Localización y extensión del defecto (relevante para pronóstico de rehabilitación vs. indicación quirúrgica)</span></li>
+<li><strong>Residuo postmiccional (si disponible ecógrafo)</strong><span class="cl-detail">Medición por ultrasonido vesical post-micción · &gt; 100-150 mL = vaciamiento incompleto significativo → comunicar a Urología</span></li>
+<li><strong>Banderas rojas para re-referir antes de iniciar rehabilitación</strong><span class="cl-detail">Hematuria macroscópica · Retención urinaria aguda · PSA en ascenso · Dolor pélvico severo de novo · Fístula urinaria o fecal sospechada · Prolapso rectal completo · Masa rectal nueva</span></li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<div class="callout">
+<strong>Secuencia sugerida de exploración:</strong> Inspección general → Abdomen → Columna/cadera/musculoesquelético → Neurológico dirigido (reflejos perineales) → Inspección perineal → Observación dinámica (contracción/Valsalva/tos) → Evaluación digital rectal con PERFECT → Verificación de estudios complementarios. Duración estimada: 30-45 minutos en primera consulta.
+</div>
+
+<!-- ===== CUESTIONARIOS (ya existentes) ===== -->
+<h3>2.3 Cuestionarios validados</h3>
+<div class="card-grid">
+<div class="card">
+<span class="tag tag-uro">Urología</span>
+<h4>ICIQ-SF</h4>
+<p>International Consultation on Incontinence Questionnaire — Short Form. Validado al español, autoadministrado. Evalúa frecuencia, cantidad y afectación en calidad de vida. Puntuación 0-21.</p>
+</div>
+<div class="card">
+<span class="tag tag-colo">Coloproctología</span>
+<h4>Escala de Wexner</h4>
+<p>Cleveland Clinic Incontinence Score. Frecuencia de incontinencia a gases, líquidos, sólidos, necesidad de protección y afectación estilo de vida. Puntuación 0-20.</p>
+</div>
+<div class="card">
+<span class="tag tag-colo">Coloproctología</span>
+<h4>FIQL</h4>
+<p>Fecal Incontinence Quality of Life Scale. Impacto en calidad de vida en 4 dominios: estilo de vida, conducta de afrontamiento, depresión/autopercepción, vergüenza.</p>
+</div>
+</div>
+
+<h3>2.4 Esquema PERFECT (Laycock & Jerwood, 2001)</h3>
+<p>Evaluación funcional de la musculatura del piso pélvico. En hombres: palpación digital rectal del esfínter anal externo y puborrectal, observación de retracción perineal y elevación testicular. Cuando la evaluación digital no sea factible, utilizar electroestimulación diagnóstica como alternativa de evaluación.</p>
+
+<div class="perfect-grid">
+<div class="pg-header">Letra</div><div class="pg-header">Parámetro</div><div class="pg-header">Registro</div>
+<div class="pg-cell pg-letter">P</div><div class="pg-cell pg-desc"><strong>Power</strong> — Fuerza de contracción (Escala Oxford Modificada)</div><div class="pg-cell pg-range">0 – 5</div>
+<div class="pg-cell pg-letter">E</div><div class="pg-cell pg-desc"><strong>Endurance</strong> — Duración de contracción máxima sostenida</div><div class="pg-cell pg-range">0 – 10 s</div>
+<div class="pg-cell pg-letter">R</div><div class="pg-cell pg-desc"><strong>Repetitions</strong> — Contracciones máximas repetibles con descanso</div><div class="pg-cell pg-range">0 – 10</div>
+<div class="pg-cell pg-letter">F</div><div class="pg-cell pg-desc"><strong>Fast</strong> — Contracciones rápidas consecutivas (fibras tipo II)</div><div class="pg-cell pg-range">0 – 10</div>
+<div class="pg-cell pg-letter" style="border-bottom:none">ECT</div><div class="pg-cell pg-desc" style="border-bottom:none"><strong>Every Contraction Timed</strong> — Cada contracción cronometrada</div><div class="pg-cell pg-range" style="border-bottom:none">Sí / No</div>
+</div>
+
+<h3>2.5 Escala Oxford Modificada</h3>
+<div class="oxford-scale">
+<div class="oxford-item ox0"><div class="grade">0</div><div class="desc">Sin contracción</div></div>
+<div class="oxford-item ox1"><div class="grade">1</div><div class="desc">Flicker (parpadeo)</div></div>
+<div class="oxford-item ox2"><div class="grade">2</div><div class="desc">Débil, sin elevación</div></div>
+<div class="oxford-item ox3"><div class="grade">3</div><div class="desc">Moderada, con elevación</div></div>
+<div class="oxford-item ox4"><div class="grade">4</div><div class="desc">Buena, elevación adecuada</div></div>
+<div class="oxford-item ox5"><div class="grade">5</div><div class="desc">Fuerte, elevación máxima</div></div>
+</div>
+
+<h3>2.6 Pad test de 1 hora (ICS)</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Resultado</th><th>Clasificación</th><th>Severidad AUA</th></tr></thead>
+<tbody>
+<tr><td>&lt; 2 g</td><td>Continente</td><td>—</td></tr>
+<tr><td>2 – 10 g</td><td>Incontinencia leve</td><td>1-2 pads/día</td></tr>
+<tr><td>11 – 50 g</td><td>Incontinencia moderada</td><td>2-4 pads/día</td></tr>
+<tr><td>&gt; 50 g</td><td>Incontinencia severa</td><td>5+ pads/día</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>2.7 EMG diagnóstica — Evaluación neurofisiológica (casos seleccionados)</h3>
+<div class="callout callout-blue">
+<strong>Uso de la EMG convencional como herramienta de estratificación pronóstica.</strong> El equipo de electrodiagnóstico con electromiografía de aguja permite evaluar: latencia motora del nervio pudendo, EMG de esfínter anal externo (denervación/reinervación), y neuropatía pudenda post-quirúrgica o post-radioterapia. Esto permite estratificar pronóstico: denervación severa con poca actividad voluntaria residual sugiere pronóstico más limitado con PFMT solo y derivación más temprana a opciones quirúrgicas.
+</div>
+<p><strong>Indicaciones para solicitar EMG neurofisiológica:</strong></p>
+<ul style="margin:8px 0 16px 20px;color:var(--text2);font-size:15px;line-height:1.7">
+<li>IU severa persistente &gt; 6 meses post-prostatectomía sin mejoría con PFMT</li>
+<li>Sospecha de neuropatía pudenda (dolor perineal, parestesias, denervación clínica)</li>
+<li>Incontinencia fecal con sospecha de lesión esfinteriana neurológica</li>
+<li>Pacientes post-radioterapia pélvica con IU o IF de novo</li>
+<li>Oxford ≤ 1 persistente tras 4 semanas de entrenamiento</li>
+</ul>
+</section>
+
+<!-- ==================== PROTOCOLO ==================== -->
+<section id="protocolo">
+<h2><span class="num">03</span> Protocolo terapéutico por vía</h2>
+<p>Protocolos diferenciados según vía de referencia. Todas las vías comparten el tronco de PFMT + electroestimulación + educación, pero difieren en objetivos y temporalidad.</p>
+
+<div class="accordion" id="protocolAccordion">
+
+<!-- VÍA A -->
+<div class="acc-item open">
+<div class="acc-header" onclick="toggleAcc(this)">
+<span>Vía A — Post-prostatectomía radical</span>
+<span class="chevron">&#9660;</span>
+</div>
+<div class="acc-body">
+<div class="acc-body-inner">
+
+<div class="timeline">
+<div class="tl-item">
+<div class="tl-time">Semanas 0 – 12 · Fase 1: Rehabilitación activa</div>
+<div class="tl-title">2-3 sesiones/semana + programa domiciliario diario</div>
+<div class="tl-desc">
+<strong>PFMT supervisado:</strong> Contracciones máximas sostenidas según PERFECT "E" (progresar hasta 10s × 10 repeticiones). Contracciones rápidas: 10 × 1s con 1s descanso. Progresión postural: supino → sedente → bipedestación → funcional. Enseñanza de "the knack" (contracción anticipatoria pre-tos, estornudo, cambio posición).
+<br><br>
+<strong>Electroestimulación:</strong> IU esfuerzo: 35-50 Hz, ciclo 5:10, 20 min. Oxford ≤ 2 = indicación principal. Vía electrodos perineales de superficie.
+<br><br>
+<strong>Retroalimentación terapéutica:</strong> Palpación digital del terapeuta como biofeedback táctil (confirmación verbal de contracción correcta). Observación de retracción perineal y elevación testicular. Automonitorización del paciente durante HEP.
+<br><br>
+<strong>Educación:</strong> Manejo hídrico (sin restricción excesiva, limitar cafeína/alcohol). Retiro progresivo de pads. Evitar Valsalva excesivo semanas iniciales. Manejo del estreñimiento.
+</div>
+</div>
+
+<div class="tl-item">
+<div class="tl-time">Semanas 12 – 24 · Fase 2: Transición a autonomía</div>
+<div class="tl-title">Reevaluación formal: ICIQ-SF + pad test + PERFECT</div>
+<div class="tl-desc">
+Si mejoría ≥ 50% pad test: reducir a 1 sesión/semana, énfasis en HEP autónomo.
+<br>Si mejoría &lt; 50%: reevaluar etiología, considerar estudios urodinámicos, EMG neurofisiológica si no realizada, intensificar protocolo o referir para neuromodulación/cirugía.
+</div>
+</div>
+
+<div class="tl-item">
+<div class="tl-time">Meses 6 – 12 · Fase 3: Mantenimiento y alta</div>
+<div class="tl-title">HEP autónomo con supervisión mensual/bimensual</div>
+<div class="tl-desc">
+La guía AUA establece que puede considerarse cirugía (esfínter artificial, sling masculino) a partir de 6 meses sin mejoría conservadora, y se recomienda fuertemente a los 12 meses si persiste IU molesta. Alta del servicio cuando pad test &lt; 2g o paciente satisfecho.
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- VÍA B -->
+<div class="acc-item">
+<div class="acc-header" onclick="toggleAcc(this)">
+<span>Vía B — IU de urgencia / vejiga hiperactiva</span>
+<span class="chevron">&#9660;</span>
+</div>
+<div class="acc-body">
+<div class="acc-body-inner">
+<p>Además de PFMT y electroestimulación, se agregan componentes específicos:</p>
+
+<strong>Entrenamiento vesical (ICS Consensus):</strong>
+<ul>
+<li>Diario miccional 3 días como línea base</li>
+<li>Horario miccional fijo: iniciar cada 30-60 minutos según intervalo actual</li>
+<li>Progresión gradual: aumentar 5-15-30 min en cada escalón</li>
+<li>Técnicas de supresión de urgencia: detenerse → sentarse → relajarse → 5-8 contracciones rápidas de piso pélvico (reflejo perineo-detrusor inhibitorio) → distracción cognitiva → esperar que pase la "ola de urgencia" → caminar al baño con calma</li>
+</ul>
+
+<strong>Electroestimulación específica OAB:</strong>
+<ul>
+<li>TENS tibial posterior transcutáneo: 20 Hz, 200 μs, 30 min, 2-3/semana × 12 semanas (Grado B APTA)</li>
+<li>Estimulación intracavitaria baja frecuencia (10 Hz) cuando indicada</li>
+</ul>
+
+<strong>Coordinación farmacológica con Urología:</strong>
+<ul>
+<li>Si no hay respuesta adecuada en 4-8 semanas de terapia conductual, comunicar para considerar anticolinérgicos o agonistas β3-adrenérgicos</li>
+<li>La combinación rehabilitación + fármaco tiene mejores resultados que monoterapia</li>
+</ul>
+</div>
+</div>
+</div>
+
+<!-- VÍA C -->
+<div class="acc-item">
+<div class="acc-header" onclick="toggleAcc(this)">
+<span>Vía C — Incontinencia fecal</span>
+<span class="chevron">&#9660;</span>
+</div>
+<div class="acc-body">
+<div class="acc-body-inner">
+
+<strong>Evaluación específica adicional:</strong>
+<ul>
+<li>Wexner + FIQL como línea base</li>
+<li>Interpretar manometría anorrectal si disponible (presiones de reposo/contracción, sensibilidad rectal)</li>
+<li>Tono en reposo (esfínter anal interno) vs. contracción voluntaria (esfínter anal externo)</li>
+</ul>
+
+<strong>Entrenamiento muscular con retroalimentación:</strong>
+<ul>
+<li>Contracciones máximas del esfínter anal externo y puborrectal con palpación digital como biofeedback táctil</li>
+<li>Contracciones sostenidas 10-30 segundos (resistencia)</li>
+<li>Coordinación: contracción en respuesta a sensación de llenado rectal</li>
+<li>Frecuencia: 4-6 sesiones en 3 meses como protocolo mínimo</li>
+</ul>
+
+<strong>Reentrenamiento intestinal:</strong>
+<ul>
+<li>Consistencia ideal heces: Bristol 3-4</li>
+<li>Horario defecatorio regular (reflejo gastrocólico post-prandial)</li>
+<li>Suplementación de fibra si heces blandas excesivas</li>
+<li>Posición defecatoria correcta (elevación pies, inclinación anterior)</li>
+</ul>
+
+<strong>Terapia manual:</strong>
+<ul>
+<li>Liberación miofascial si hipertonía o puntos gatillo</li>
+<li>Movilización de tejido cicatrizal en post-quirúrgicos</li>
+<li>Relajación perineal si anismo/disinergia coexistente</li>
+</ul>
+
+<strong>Criterios de re-referencia a Coloproctología:</strong>
+<ul>
+<li>Fallo terapéutico tras 3-6 meses de rehabilitación intensiva</li>
+<li>Evaluación de neuromodulación sacra, PTNS percutáneo, o cirugía</li>
+</ul>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- ==================== ELECTROESTIMULACIÓN ==================== -->
+<section id="electro">
+<h2><span class="num">04</span> Parámetros de electroestimulación</h2>
+<p>Referencia rápida para prescripción. La intensidad siempre se ajusta al máximo tolerable sin dolor. La electroestimulación para incontinencia fecal se recomienda como adyuvante al PFMT, no como monoterapia.</p>
+
+<div class="table-wrap">
+<table>
+<thead>
+<tr><th>Indicación</th><th>Frecuencia</th><th>Ancho pulso</th><th>Ciclo on:off</th><th>Duración</th><th>Sesiones</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>IU esfuerzo</strong> (fortalecimiento)</td><td>35 – 50 Hz</td><td>200 – 300 μs</td><td>5 : 10 s</td><td>20 min</td><td>2-3/sem × 12 sem</td></tr>
+<tr><td><strong>IU urgencia</strong> (neuromodulación)</td><td>10 – 20 Hz</td><td>200 μs</td><td>Continuo o 5:5</td><td>20 min</td><td>2-3/sem × 12 sem</td></tr>
+<tr><td><strong>TENS tibial posterior</strong> (OAB)</td><td>20 Hz</td><td>200 μs</td><td>Continuo</td><td>30 min</td><td>2-3/sem × 12 sem</td></tr>
+<tr><td><strong>IF</strong> (fortalecimiento anal)</td><td>35 – 50 Hz</td><td>200 – 300 μs</td><td>5 : 10 s</td><td>20 min</td><td>2-3/sem × 12 sem</td></tr>
+<tr><td><strong>IF</strong> (sensibilidad)</td><td>10 – 20 Hz</td><td>200 μs</td><td>Continuo</td><td>15 min</td><td>2/sem × 8 sem</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="callout callout-amber">
+<strong>Nota sobre Oxford y electroestimulación:</strong> La electroestimulación tiene su indicación principal cuando el paciente tiene Oxford ≤ 2 (incapacidad para generar contracción voluntaria adecuada). En Oxford ≥ 3, el PFMT activo supervisado es la intervención principal y la electroestimulación es adyuvante opcional.
+</div>
+
+<h3>Colocación de electrodos</h3>
+<div class="card-grid">
+<div class="card">
+<span class="tag tag-uro">IU esfuerzo/urgencia</span>
+<h4>Electrodos perineales de superficie</h4>
+<p>Par de electrodos adhesivos en región perineal, a ambos lados de la línea media. Paciente en decúbito supino o sedente. Alternativa: sonda endoanal cuando sea aceptada y tolerada.</p>
+</div>
+<div class="card">
+<span class="tag tag-uro">TENS tibial posterior</span>
+<h4>Electrodo tibial posterior</h4>
+<p>Electrodo activo posterior al maléolo medial, electrodo dispersivo ~10 cm cefálico ipsilateral. Verificar contracción de flexores de dedos del pie como indicador de estimulación adecuada del nervio tibial.</p>
+</div>
+<div class="card">
+<span class="tag tag-colo">IF</span>
+<h4>Electrodos perineales / endoanal</h4>
+<p>Misma configuración perineal que para IU, o sonda endoanal con electrodos bipolares integrados. La sonda endoanal proporciona estimulación más focalizada del esfínter anal externo.</p>
+</div>
+</div>
+</section>
+
+<!-- ==================== SEGUIMIENTO ==================== -->
+<section id="seguimiento">
+<h2><span class="num">05</span> Seguimiento y desenlaces</h2>
+
+<h3>Cronograma de reevaluación</h3>
+<div class="timeline">
+<div class="tl-item">
+<div class="tl-time">Semana 4</div>
+<div class="tl-title">Ajuste inicial</div>
+<div class="tl-desc">Verificar técnica de contracción (palpación). Ajustar parámetros de electroestimulación. Revisar adherencia al HEP. Registro diario miccional/evacuatorio.</div>
+</div>
+<div class="tl-item">
+<div class="tl-time">Semana 12</div>
+<div class="tl-title">Revaloración formal</div>
+<div class="tl-desc">Repetir: pad test 1h, ICIQ-SF o Wexner/FIQL, esquema PERFECT. Comparar con línea base. Decisión: continuar / ajustar / escalar. Considerar EMG neurofisiológica si no hay mejoría y no se ha realizado.</div>
+</div>
+<div class="tl-item">
+<div class="tl-time">Meses 6 – 12</div>
+<div class="tl-title">Evaluación final</div>
+<div class="tl-desc">Resultado final y decisión de alta o referencia para manejo quirúrgico. Criterio de alta: pad test &lt; 2g o satisfacción del paciente con nivel funcional alcanzado.</div>
+</div>
+</div>
+
+<h3>Indicadores de resultado del servicio</h3>
+<div class="table-wrap">
+<table>
+<thead><tr><th>Indicador</th><th>Meta</th></tr></thead>
+<tbody>
+<tr><td>Reducción ≥ 50% pad test a 12 semanas</td><td>≥ 60% de pacientes</td></tr>
+<tr><td>Reducción ≥ 3 puntos ICIQ-SF a 12 semanas</td><td>≥ 60% de pacientes</td></tr>
+<tr><td>Tasa de continencia a 6 meses (post-prostatectomía)</td><td>≥ 70%</td></tr>
+<tr><td>Reducción ≥ 5 puntos Wexner a 12 semanas (IF)</td><td>≥ 50% de pacientes</td></tr>
+<tr><td>Adherencia al programa (≥ 80% asistencia)</td><td>≥ 75% de pacientes</td></tr>
+<tr><td>Satisfacción del paciente</td><td>≥ 80%</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Criterios de escalamiento (re-referencia quirúrgica)</h3>
+<div class="card-grid">
+<div class="card">
+<span class="tag tag-uro">Post-prostatectomía</span>
+<h4>A partir de 6 meses</h4>
+<p>Si IU no mejora pese a terapia conservadora. La guía AUA recomienda fuertemente ofrecer cirugía a los 12 meses. Opciones: esfínter artificial urinario (estándar de referencia) o sling masculino (IU leve-moderada).</p>
+</div>
+<div class="card">
+<span class="tag tag-colo">Incontinencia fecal</span>
+<h4>3 – 6 meses sin respuesta</h4>
+<p>Re-referir a Coloproctología para evaluación de neuromodulación sacra, PTNS percutáneo, esfinteroplastía u otras opciones quirúrgicas.</p>
+</div>
+</div>
+</section>
+
+<!-- ==================== FORMATO NOTA CLÍNICA ==================== -->
+<section id="formato">
+<h2><span class="num">06</span> Generador de nota clínica</h2>
+<p>Complete los campos durante la consulta. Al finalizar, presione "Generar nota" para obtener el texto listo para copiar y pegar en el expediente clínico electrónico.</p>
+
+<div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow);overflow:hidden">
+
+<!-- Header del formulario -->
+<div style="background:var(--accent);padding:16px 24px;color:#fff">
+<div style="font-size:16px;font-weight:600">Evaluación inicial — Rehabilitación de piso pélvico</div>
+<div style="font-size:13px;opacity:0.8;margin-top:2px">Hospital General "Dr. Manuel Gea González" · División de Rehabilitación</div>
+</div>
+
+<div style="padding:24px" id="clinicalForm">
+
+<!-- DATOS GENERALES -->
+<fieldset style="border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:20px">
+<legend style="font-size:14px;font-weight:600;color:var(--accent-dark);padding:0 8px">Datos generales</legend>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+<div class="fm-group"><label class="fm-label">Nombre del paciente</label><input type="text" class="fm-input" id="fNombre"></div>
+<div class="fm-group"><label class="fm-label">Edad</label><input type="text" class="fm-input" id="fEdad" placeholder="años"></div>
+<div class="fm-group"><label class="fm-label">Fecha de consulta</label><input type="date" class="fm-input" id="fFecha"></div>
+<div class="fm-group"><label class="fm-label">No. expediente</label><input type="text" class="fm-input" id="fExpediente"></div>
+<div class="fm-group"><label class="fm-label">Servicio que refiere</label>
+<select class="fm-input" id="fServRef"><option value="">Seleccionar...</option><option>Urología</option><option>Coloproctología</option><option>Otro</option></select></div>
+<div class="fm-group"><label class="fm-label">Médico que refiere</label><input type="text" class="fm-input" id="fMedRef"></div>
+</div>
+</fieldset>
+
+<!-- DIAGNÓSTICO DE REFERENCIA -->
+<fieldset style="border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:20px">
+<legend style="font-size:14px;font-weight:600;color:var(--blue-dark);padding:0 8px">Diagnóstico y antecedente quirúrgico</legend>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+<div class="fm-group"><label class="fm-label">Diagnóstico de referencia</label><input type="text" class="fm-input" id="fDxRef" placeholder="Ej: Incontinencia urinaria post-prostatectomía"></div>
+<div class="fm-group"><label class="fm-label">Tipo de cirugía</label>
+<select class="fm-input" id="fCirugia"><option value="">Seleccionar...</option><option>Prostatectomía radical abierta</option><option>Prostatectomía radical laparoscópica</option><option>Prostatectomía radical robótica</option><option>Resección anterior baja</option><option>Esfinteroplastía</option><option>Hemorroidectomía</option><option>RTU prostática</option><option>No quirúrgico</option><option>Otra</option></select></div>
+<div class="fm-group"><label class="fm-label">Fecha de cirugía</label><input type="date" class="fm-input" id="fFechaCx"></div>
+<div class="fm-group"><label class="fm-label">Preservación de bandeletas</label>
+<select class="fm-input" id="fBandeletas"><option value="">N/A</option><option>Bilateral</option><option>Unilateral</option><option>No preservación</option><option>Se desconoce</option></select></div>
+<div class="fm-group"><label class="fm-label">Radioterapia</label>
+<select class="fm-input" id="fRT"><option value="">No</option><option>RT adyuvante</option><option>RT de rescate</option><option>Braquiterapia</option></select></div>
+<div class="fm-group"><label class="fm-label">Tiempo postquirúrgico</label><input type="text" class="fm-input" id="fTiempoPQ" placeholder="Ej: 8 semanas"></div>
+</div>
+</fieldset>
+
+<!-- INCONTINENCIA -->
+<fieldset style="border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:20px">
+<legend style="font-size:14px;font-weight:600;color:var(--purple-dark);padding:0 8px">Caracterización de la incontinencia</legend>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+<div class="fm-group"><label class="fm-label">Tipo de incontinencia urinaria</label>
+<select class="fm-input" id="fTipoIU"><option value="">N/A</option><option>Esfuerzo</option><option>Urgencia</option><option>Mixta</option><option>Continua</option><option>Goteo postmiccional</option></select></div>
+<div class="fm-group"><label class="fm-label">Tipo de incontinencia fecal</label>
+<select class="fm-input" id="fTipoIF"><option value="">N/A</option><option>Urgencia con escape</option><option>Escape pasivo</option><option>Gases solamente</option><option>Mixta (urgencia + pasiva)</option></select></div>
+<div class="fm-group"><label class="fm-label">Pads/día (urinaria)</label><input type="number" class="fm-input" id="fPads" min="0" max="20" placeholder="0"></div>
+<div class="fm-group"><label class="fm-label">Episodios IF/semana</label><input type="number" class="fm-input" id="fEpIF" min="0" placeholder="0"></div>
+<div class="fm-group"><label class="fm-label">Tiempo de evolución</label><input type="text" class="fm-input" id="fEvolucion" placeholder="Ej: 3 meses"></div>
+<div class="fm-group"><label class="fm-label">Factores desencadenantes</label><input type="text" class="fm-input" id="fDesencadenantes" placeholder="Ej: tos, esfuerzo, caminata"></div>
+</div>
+<div class="fm-group" style="margin-top:12px"><label class="fm-label">Síntomas asociados</label>
+<textarea class="fm-input" id="fSintomas" rows="2" placeholder="Urgencia, frecuencia, nocturia, estreñimiento, dolor pélvico, disfunción eréctil, climacturia..."></textarea></div>
+</fieldset>
+
+<!-- COMORBILIDADES -->
+<fieldset style="border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:20px">
+<legend style="font-size:14px;font-weight:600;color:var(--amber-dark);padding:0 8px">Comorbilidades y medicación</legend>
+<div class="fm-group"><label class="fm-label">Comorbilidades relevantes</label>
+<textarea class="fm-input" id="fComorbilidades" rows="2" placeholder="DM2, HAS, obesidad, EPOC, enfermedad neurológica, cirugías previas..."></textarea></div>
+<div class="fm-group" style="margin-top:12px"><label class="fm-label">Medicación actual relevante</label>
+<textarea class="fm-input" id="fMedicacion" rows="2" placeholder="Diuréticos, anticolinérgicos, SGLT2, alfa-bloqueadores, opioides, laxantes..."></textarea></div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:12px">
+<div class="fm-group"><label class="fm-label">Peso (kg)</label><input type="number" class="fm-input" id="fPeso" step="0.1"></div>
+<div class="fm-group"><label class="fm-label">Talla (m)</label><input type="number" class="fm-input" id="fTalla" step="0.01" placeholder="1.70"></div>
+<div class="fm-group"><label class="fm-label">IMC (auto)</label><input type="text" class="fm-input" id="fIMC" readonly style="background:var(--bg2)"></div>
+</div>
+</fieldset>
+
+<!-- EXPLORACIÓN FÍSICA -->
+<fieldset style="border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:20px">
+<legend style="font-size:14px;font-weight:600;color:var(--coral-dark);padding:0 8px">Exploración física</legend>
+
+<div class="fm-group"><label class="fm-label">Abdomen</label>
+<textarea class="fm-input" id="fAbdomen" rows="2" placeholder="Blando, depresible, sin masas, sin globo vesical. Cicatriz infraumbilical media en buen estado. Sin diástasis de rectos. Sin dolor suprapúbico."></textarea></div>
+
+<div class="fm-group" style="margin-top:12px"><label class="fm-label">Exploración neurológica dirigida</label>
+<textarea class="fm-input" id="fNeuro" rows="2" placeholder="Sensibilidad perineal S2-S4 conservada. Reflejo bulbocavernoso presente. Reflejo anocutáneo presente y simétrico. Reflejo cremastérico presente bilateral."></textarea></div>
+
+<div class="fm-group" style="margin-top:12px"><label class="fm-label">Exploración musculoesquelética</label>
+<textarea class="fm-input" id="fMSK" rows="2" placeholder="Columna lumbosacra sin dolor. Arcos de movilidad de cadera completos. Sin contractura de aductores. Postura global con adecuada alineación pélvica."></textarea></div>
+
+<div class="fm-group" style="margin-top:12px"><label class="fm-label">Inspección perineal</label>
+<textarea class="fm-input" id="fPerineal" rows="2" placeholder="Piel íntegra, sin dermatitis. Sin cicatrices perineales. Sin hemorroides, fisuras o prolapso visible. Retracción perineal presente a la contracción voluntaria. Elevación testicular presente."></textarea></div>
+
+<div class="fm-group" style="margin-top:12px"><label class="fm-label">Evaluación digital rectal</label>
+<textarea class="fm-input" id="fRectal" rows="2" placeholder="Tono en reposo: normal/disminuido. Contracción voluntaria presente. Sin contracción paradójica. Sin puntos gatillo. Sin masas."></textarea></div>
+
+<div class="fm-group" style="margin-top:12px"><label class="fm-label">Prueba de tos (Cough Stress Test)</label>
+<select class="fm-input" id="fCough"><option value="">Seleccionar...</option><option>Positiva (escape visible)</option><option>Negativa (sin escape)</option><option>No realizada</option></select></div>
+</fieldset>
+
+<!-- PERFECT Y ESCALAS -->
+<fieldset style="border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:20px">
+<legend style="font-size:14px;font-weight:600;color:var(--accent-dark);padding:0 8px">Esquema PERFECT y escalas</legend>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px">
+<div class="fm-group"><label class="fm-label">P — Oxford (0-5)</label>
+<select class="fm-input" id="fOxford"><option value="">--</option><option>0 — Sin contracción</option><option>1 — Flicker</option><option>2 — Débil</option><option>3 — Moderada</option><option>4 — Buena</option><option>5 — Fuerte</option></select></div>
+<div class="fm-group"><label class="fm-label">E — Endurance (s)</label><input type="number" class="fm-input" id="fEndurance" min="0" max="10" placeholder="0-10"></div>
+<div class="fm-group"><label class="fm-label">R — Repeticiones</label><input type="number" class="fm-input" id="fReps" min="0" max="10" placeholder="0-10"></div>
+<div class="fm-group"><label class="fm-label">F — Fast</label><input type="number" class="fm-input" id="fFast" min="0" max="10" placeholder="0-10"></div>
+</div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:12px">
+<div class="fm-group"><label class="fm-label">Pad test 1h (gramos)</label><input type="number" class="fm-input" id="fPadTest" min="0" step="0.1" placeholder="g"></div>
+<div class="fm-group"><label class="fm-label">ICIQ-SF (0-21)</label><input type="number" class="fm-input" id="fICIQ" min="0" max="21"></div>
+<div class="fm-group"><label class="fm-label">Wexner (0-20)</label><input type="number" class="fm-input" id="fWexner" min="0" max="20"></div>
+</div>
+</fieldset>
+
+<!-- PLAN -->
+<fieldset style="border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:20px">
+<legend style="font-size:14px;font-weight:600;color:var(--blue-dark);padding:0 8px">Plan terapéutico</legend>
+
+<div class="fm-group"><label class="fm-label">Modalidades indicadas</label>
+<div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:4px">
+<label class="fm-check"><input type="checkbox" id="fPlanPFMT" checked> PFMT supervisado</label>
+<label class="fm-check"><input type="checkbox" id="fPlanEE"> Electroestimulación</label>
+<label class="fm-check"><input type="checkbox" id="fPlanTM"> Terapia manual</label>
+<label class="fm-check"><input type="checkbox" id="fPlanEV"> Entrenamiento vesical</label>
+<label class="fm-check"><input type="checkbox" id="fPlanEI"> Entrenamiento intestinal</label>
+<label class="fm-check"><input type="checkbox" id="fPlanEduc" checked> Educación al paciente</label>
+</div></div>
+
+<div class="fm-group" style="margin-top:12px"><label class="fm-label">Parámetros de electroestimulación (si aplica)</label>
+<input type="text" class="fm-input" id="fParamEE" placeholder="Ej: TENS perineal 35 Hz, 200 μs, ciclo 5:10, 20 min"></div>
+
+<div class="fm-group" style="margin-top:12px"><label class="fm-label">Frecuencia de sesiones</label>
+<select class="fm-input" id="fFrecuencia"><option value="">Seleccionar...</option><option>2 sesiones/semana</option><option>3 sesiones/semana</option><option>1 sesión/semana</option></select></div>
+
+<div class="fm-group" style="margin-top:12px"><label class="fm-label">Indicaciones adicionales / observaciones</label>
+<textarea class="fm-input" id="fObs" rows="3" placeholder="HEP domiciliario, restricciones, interconsultas, estudios solicitados..."></textarea></div>
+
+<div class="fm-group" style="margin-top:12px"><label class="fm-label">Próxima cita / reevaluación</label>
+<input type="text" class="fm-input" id="fProxCita" placeholder="Ej: 4 semanas para revaloración de técnica"></div>
+</fieldset>
+
+<!-- BOTONES -->
+<div style="display:flex;gap:12px;flex-wrap:wrap">
+<button onclick="generarNota()" style="background:var(--accent);color:#fff;border:none;padding:12px 28px;border-radius:var(--radius);font-size:15px;font-weight:600;cursor:pointer;font-family:var(--sans);transition:background 0.15s" onmouseover="this.style.background='var(--accent-dark)'" onmouseout="this.style.background='var(--accent)'">Generar nota clínica</button>
+<button onclick="limpiarForm()" style="background:var(--bg2);color:var(--text2);border:1px solid var(--border);padding:12px 28px;border-radius:var(--radius);font-size:15px;font-weight:500;cursor:pointer;font-family:var(--sans);transition:background 0.15s" onmouseover="this.style.background='var(--bg3)'" onmouseout="this.style.background='var(--bg2)'">Limpiar formulario</button>
+</div>
+
+</div>
+
+<!-- NOTA GENERADA -->
+<div id="notaOutput" style="display:none;border-top:1px solid var(--border);background:var(--bg2);padding:24px">
+<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+<div style="font-size:15px;font-weight:600;color:var(--text)">Nota clínica generada</div>
+<button onclick="copiarNota()" id="btnCopiar" style="background:var(--accent);color:#fff;border:none;padding:8px 20px;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;font-family:var(--sans);transition:background 0.15s" onmouseover="this.style.background='var(--accent-dark)'" onmouseout="this.style.background='var(--accent)'">Copiar al portapapeles</button>
+</div>
+<pre id="notaTexto" style="background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:20px;font-family:var(--sans);font-size:13px;color:var(--text);white-space:pre-wrap;word-wrap:break-word;line-height:1.6;max-height:600px;overflow-y:auto"></pre>
+</div>
+
+</div>
+</section>
+
+<!-- ==================== DESCARGAS ==================== -->
+<section id="descargas">
+<h2><span class="num">07</span> Cuestionarios y formatos</h2>
+<p>Cuestionarios validados y formatos de registro para uso clínico.</p>
+
+<div class="download-grid">
+<a class="dl-card" href="https://www.iciq.net/iciq-ui-sf" target="_blank" rel="noopener">
+<div class="dl-icon dl-icon-doc">&#128196;</div>
+<div><div class="dl-name">ICIQ-UI SF</div><div class="dl-desc">Incontinencia urinaria · Fuente oficial ICIQ.net</div></div>
+</a>
+<a class="dl-card" href="https://www.mdcalc.com/calc/10064/wexner-score-obstructed-defecation-syndrome-ods" target="_blank" rel="noopener">
+<div class="dl-icon dl-icon-doc">&#128196;</div>
+<div><div class="dl-name">Escala de Wexner</div><div class="dl-desc">Incontinencia fecal · MDCalc</div></div>
+</a>
+<a class="dl-card" href="FIQL_Escala_Calidad_Vida_IF.pdf" target="_blank" rel="noopener">
+<div class="dl-icon dl-icon-pdf">&#128203;</div>
+<div><div class="dl-name">FIQL</div><div class="dl-desc">Calidad de vida en IF · PDF descargable</div></div>
+</a>
+<a class="dl-card" href="https://www.continence.org.au/bladder-diary" target="_blank" rel="noopener">
+<div class="dl-icon dl-icon-doc">&#128196;</div>
+<div><div class="dl-name">Diario miccional</div><div class="dl-desc">Continence Foundation Australia</div></div>
+</a>
+<a class="dl-card" href="Consentimiento_Informado_Piso_Pelvico.pdf" target="_blank" rel="noopener">
+<div class="dl-icon dl-icon-pdf">&#128203;</div>
+<div><div class="dl-name">Consentimiento informado</div><div class="dl-desc">Evaluación y tratamiento de piso pélvico · PDF</div></div>
+</a>
+</div>
+</section>
+
+<!-- ==================== REFERENCIAS ==================== -->
+<section id="referencias" style="scroll-margin-top:72px">
+<h2><span class="num">08</span> Referencias bibliográficas</h2>
+<ol style="font-size:14px;color:var(--text2);line-height:1.7;padding-left:20px">
+<li style="margin-bottom:8px">Sandhu JS, Breyer BN, Comiter C, et al. Incontinence After Prostate Treatment: AUA/GURS/SUFU Guideline (2019; Amended 2024). <em>J Urol.</em> 2024.</li>
+<li style="margin-bottom:8px">Cameron AP, Chung DE, Dielubanza EJ, et al. The AUA/SUFU Guideline on the Diagnosis and Treatment of Idiopathic Overactive Bladder. <em>J Urol.</em> 2024;212(1):11-20.</li>
+<li style="margin-bottom:8px">Laycock J, Jerwood D. Pelvic floor muscle assessment: the PERFECT scheme. <em>Physiotherapy.</em> 2001;87(12):631-642.</li>
+<li style="margin-bottom:8px">ICS Consensus Statement on Bladder Training and Bowel Training. International Continence Society, 2020.</li>
+<li style="margin-bottom:8px">APTA Pelvic Health CPG: Rehabilitation Interventions for Urgency Urinary Incontinence in Adult Women. ICS 2023.</li>
+<li style="margin-bottom:8px">ASCRS CPG for the Evaluation and Management of Chronic Constipation. <em>Dis Colon Rectum.</em> 2024;67(10):1244-1257.</li>
+<li style="margin-bottom:8px">Pun MY, et al. Effectiveness of physiotherapy on fecal incontinence following colorectal surgery: systematic review. <em>Support Care Cancer.</em> 2024;32(2):103.</li>
+<li style="margin-bottom:8px">Hay-Smith EJC, et al. PFMT for urinary incontinence in women (Cochrane Review). 2024.</li>
+<li style="margin-bottom:8px">Bø K. Pelvic floor muscle training in treatment of female SUI, POP and sexual dysfunction. <em>World J Urol.</em> 2012;30(4):437-443.</li>
+<li style="margin-bottom:8px">European Guidelines UEG/ESNM for the diagnosis and treatment of fecal incontinence. 2024-2025.</li>
+</ol>
+</section>
+
+</main>
+
+<footer class="footer">
+<p><strong>División de Rehabilitación — Hospital General "Dr. Manuel Gea González"</strong></p>
+<p>Secretaría de Salud, Ciudad de México · Marzo 2026</p>
+<p style="margin-top:8px;font-size:12px">Revisión programada: Marzo 2027 · Documento para uso clínico interno</p>
+</footer>
+
+<script>
+function toggleAcc(el){
+const item=el.parentElement;
+item.classList.toggle('open');
+}
+
+// Active nav link on scroll
+const sections=document.querySelectorAll('section[id]');
+const navLinks=document.querySelectorAll('.nav-links a');
+function updateNav(){
+let current='';
+sections.forEach(s=>{
+const top=s.offsetTop-100;
+if(scrollY>=top)current=s.id;
+});
+navLinks.forEach(a=>{
+a.classList.remove('active');
+if(a.getAttribute('href')==='#'+current)a.classList.add('active');
+});
+}
+window.addEventListener('scroll',updateNav,{passive:true});
+updateNav();
+
+// IMC auto-calculation
+document.getElementById('fPeso')?.addEventListener('input',calcIMC);
+document.getElementById('fTalla')?.addEventListener('input',calcIMC);
+function calcIMC(){
+const p=parseFloat(document.getElementById('fPeso').value);
+const t=parseFloat(document.getElementById('fTalla').value);
+const el=document.getElementById('fIMC');
+if(p>0&&t>0){const imc=(p/(t*t)).toFixed(1);el.value=imc+' kg/m²';}else{el.value='';}
+}
+
+// Severity classification helpers
+function clasifPadTest(g){
+if(g<2)return'Continente';if(g<=10)return'Incontinencia leve';if(g<=50)return'Incontinencia moderada';return'Incontinencia severa';
+}
+function clasifPads(n){
+if(n<=0)return'Sin uso de protección';if(n<=2)return'Leve (1-2 pads/día)';if(n<=4)return'Moderada (2-4 pads/día)';return'Severa (5+ pads/día)';
+}
+
+function v(id){const el=document.getElementById(id);if(!el)return'';if(el.type==='checkbox')return el.checked;return el.value.trim();}
+
+function generarNota(){
+const fecha=v('fFecha')?new Date(v('fFecha')+'T12:00:00').toLocaleDateString('es-MX',{day:'2-digit',month:'long',year:'numeric'}):'[Fecha]';
+
+let nota=`NOTA DE EVALUACIÓN INICIAL — REHABILITACIÓN DE PISO PÉLVICO
+Hospital General "Dr. Manuel Gea González" · División de Rehabilitación
+${'═'.repeat(65)}
+
+FECHA: ${fecha}
+PACIENTE: ${v('fNombre')||'[Nombre]'}
+EDAD: ${v('fEdad')||'[Edad]'} años
+EXPEDIENTE: ${v('fExpediente')||'[No. expediente]'}
+REFERIDO POR: ${v('fServRef')||'[Servicio]'} — Dr(a). ${v('fMedRef')||'[Médico]'}
+
+${'─'.repeat(65)}
+MOTIVO DE CONSULTA
+${'─'.repeat(65)}
+Paciente referido de ${v('fServRef')||'[Servicio]'} con diagnóstico de ${v('fDxRef')||'[Diagnóstico]'}.`;
+
+// Cirugía
+if(v('fCirugia')&&v('fCirugia')!=='No quirúrgico'){
+nota+=`\n\nANTECEDENTE QUIRÚRGICO: ${v('fCirugia')}`;
+if(v('fFechaCx'))nota+=` (${new Date(v('fFechaCx')+'T12:00:00').toLocaleDateString('es-MX',{day:'2-digit',month:'long',year:'numeric'})})`;
+if(v('fTiempoPQ'))nota+=`. Tiempo postquirúrgico: ${v('fTiempoPQ')}`;
+if(v('fBandeletas')&&v('fBandeletas')!=='N/A')nota+=`. Preservación de bandeletas: ${v('fBandeletas')}`;
+nota+='.';
+}
+if(v('fRT'))nota+=`\nRadioterapia: ${v('fRT')}.`;
+
+nota+=`\n\n${'─'.repeat(65)}
+PADECIMIENTO ACTUAL
+${'─'.repeat(65)}`;
+
+if(v('fTipoIU')&&v('fTipoIU')!=='N/A'){
+nota+=`\nIncontinencia urinaria de tipo ${v('fTipoIU').toLowerCase()}`;
+if(v('fPads'))nota+=`, con uso de ${v('fPads')} pads/día (severidad: ${clasifPads(parseInt(v('fPads')))})`;
+nota+='.';
+}
+if(v('fTipoIF')&&v('fTipoIF')!=='N/A'){
+nota+=`\nIncontinencia fecal: ${v('fTipoIF').toLowerCase()}`;
+if(v('fEpIF'))nota+=`, ${v('fEpIF')} episodios/semana`;
+nota+='.';
+}
+if(v('fEvolucion'))nota+=`\nTiempo de evolución: ${v('fEvolucion')}.`;
+if(v('fDesencadenantes'))nota+=`\nFactores desencadenantes: ${v('fDesencadenantes')}.`;
+if(v('fSintomas'))nota+=`\nSíntomas asociados: ${v('fSintomas')}.`;
+
+// Comorbilidades
+if(v('fComorbilidades')||v('fMedicacion')){
+nota+=`\n\n${'─'.repeat(65)}
+ANTECEDENTES RELEVANTES
+${'─'.repeat(65)}`;
+if(v('fComorbilidades'))nota+=`\nComorbilidades: ${v('fComorbilidades')}.`;
+if(v('fMedicacion'))nota+=`\nMedicación actual: ${v('fMedicacion')}.`;
+}
+
+// EF
+nota+=`\n\n${'─'.repeat(65)}
+EXPLORACIÓN FÍSICA
+${'─'.repeat(65)}`;
+
+const peso=v('fPeso'),talla=v('fTalla'),imc=v('fIMC');
+if(peso||talla)nota+=`\nSomatometría: Peso ${peso||'__'} kg, Talla ${talla||'__'} m${imc?', IMC '+imc:''}.`;
+if(v('fAbdomen'))nota+=`\n\nAbdomen: ${v('fAbdomen')}`;
+if(v('fNeuro'))nota+=`\n\nExploración neurológica dirigida: ${v('fNeuro')}`;
+if(v('fMSK'))nota+=`\n\nExploración musculoesquelética: ${v('fMSK')}`;
+if(v('fPerineal'))nota+=`\n\nInspección perineal: ${v('fPerineal')}`;
+if(v('fRectal'))nota+=`\n\nEvaluación digital rectal: ${v('fRectal')}`;
+if(v('fCough'))nota+=`\n\nPrueba de tos (Cough Stress Test): ${v('fCough')}.`;
+
+// PERFECT
+const ox=v('fOxford'),en=v('fEndurance'),re=v('fReps'),fa=v('fFast');
+if(ox||en||re||fa){
+nota+=`\n\n${'─'.repeat(65)}
+EVALUACIÓN FUNCIONAL DE PISO PÉLVICO — ESQUEMA PERFECT
+${'─'.repeat(65)}`;
+if(ox)nota+=`\nP (Power/Oxford): ${ox}`;
+if(en)nota+=`\nE (Endurance): ${en} segundos`;
+if(re)nota+=`\nR (Repetitions): ${re}`;
+if(fa)nota+=`\nF (Fast contractions): ${fa}`;
+}
+
+// Escalas
+const pt=v('fPadTest'),iciq=v('fICIQ'),wex=v('fWexner');
+if(pt||iciq||wex){
+nota+=`\n\nESCALAS Y MEDICIONES:`;
+if(pt)nota+=`\nPad test 1 hora: ${pt} g (${clasifPadTest(parseFloat(pt))}).`;
+if(iciq)nota+=`\nICIQ-SF: ${iciq}/21.`;
+if(wex)nota+=`\nWexner: ${wex}/20.`;
+}
+
+// Plan
+nota+=`\n\n${'─'.repeat(65)}
+DIAGNÓSTICO FUNCIONAL EN REHABILITACIÓN
+${'─'.repeat(65)}`;
+nota+=`\n${v('fDxRef')||'[Diagnóstico de referencia]'}`;
+if(ox){
+const oxNum=parseInt(ox.charAt(0));
+if(oxNum<=2)nota+=`\nDebilidad severa de musculatura de piso pélvico (Oxford ${oxNum}/5).`;
+else if(oxNum===3)nota+=`\nDebilidad moderada de musculatura de piso pélvico (Oxford ${oxNum}/5).`;
+else nota+=`\nFuerza adecuada de musculatura de piso pélvico (Oxford ${oxNum}/5).`;
+}
+
+nota+=`\n\n${'─'.repeat(65)}
+PLAN TERAPÉUTICO
+${'─'.repeat(65)}`;
+
+const modalidades=[];
+if(v('fPlanPFMT'))modalidades.push('Entrenamiento muscular de piso pélvico (PFMT) supervisado por terapeuta físico');
+if(v('fPlanEE'))modalidades.push('Electroestimulación perineal');
+if(v('fPlanTM'))modalidades.push('Terapia manual de piso pélvico');
+if(v('fPlanEV'))modalidades.push('Entrenamiento vesical con técnicas de supresión de urgencia');
+if(v('fPlanEI'))modalidades.push('Reentrenamiento intestinal');
+if(v('fPlanEduc'))modalidades.push('Educación al paciente (manejo hídrico, hábitos, retiro progresivo de protección)');
+
+if(modalidades.length){
+nota+='\nModalidades indicadas:';
+modalidades.forEach((m,i)=>nota+=`\n${i+1}. ${m}`);
+}
+if(v('fParamEE'))nota+=`\n\nParámetros de electroestimulación: ${v('fParamEE')}.`;
+if(v('fFrecuencia'))nota+=`\nFrecuencia de sesiones: ${v('fFrecuencia')}.`;
+if(v('fObs'))nota+=`\n\nObservaciones: ${v('fObs')}`;
+if(v('fProxCita'))nota+=`\nPróxima cita/reevaluación: ${v('fProxCita')}.`;
+
+nota+=`\n\nSe otorga consentimiento informado para evaluación y tratamiento de rehabilitación de piso pélvico. Paciente acepta y firma.`;
+
+nota+=`\n\n\n_______________________________
+Nombre y firma del médico
+Cédula profesional
+División de Rehabilitación
+HG "Dr. Manuel Gea González"`;
+
+document.getElementById('notaTexto').textContent=nota;
+document.getElementById('notaOutput').style.display='block';
+document.getElementById('notaOutput').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function copiarNota(){
+const texto=document.getElementById('notaTexto').textContent;
+navigator.clipboard.writeText(texto).then(()=>{
+const btn=document.getElementById('btnCopiar');
+btn.textContent='Copiado';btn.style.background='#2E7D32';
+setTimeout(()=>{btn.textContent='Copiar al portapapeles';btn.style.background='var(--accent)';},2000);
+});
+}
+
+function limpiarForm(){
+if(!confirm('¿Limpiar todos los campos del formulario?'))return;
+document.querySelectorAll('#clinicalForm input, #clinicalForm textarea, #clinicalForm select').forEach(el=>{
+if(el.type==='checkbox'){el.checked=el.id==='fPlanPFMT'||el.id==='fPlanEduc';}
+else if(el.tagName==='SELECT'){el.selectedIndex=0;}
+else{el.value='';}
+});
+document.getElementById('notaOutput').style.display='none';
+}
+</script>
+
+</body>
+</html>
